@@ -14,4 +14,4 @@ def get_posts():
 @app.post("/createposts")
 def create_posts(newpost: dict= Body(...)):
     print(newpost)
-    return{"status":"successfully created a post"}
+    return{"new_post": f"data: {newpost['data']} title: {newpost['title']} "}
